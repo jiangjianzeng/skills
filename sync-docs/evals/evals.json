@@ -1,0 +1,40 @@
+{
+  "skill_name": "sync-docs",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "帮我把这个仓库的文档同步一下：我刚改了 src/order/service.ts，新增了对外导出的 `calculateOrderRisk`，并且把风控流程拆成 pre-check 和 post-check 两段。请更新相关 MODULE.md，并检查根目录 AGENTS.md 是否需要调整。先给我预览再执行。",
+      "expected_output": "先输出受影响文档清单和更新预览；将该变更识别为内容级更新，更新对应 MODULE.md 的职责/接口/流程描述，并在必要时提示或更新 AGENTS.md；执行前明确等待用户确认。",
+      "files": [],
+      "expectations": [
+        "输出包含分组预览（至少包含内容级更新分组）",
+        "将该变更判定为内容级更新，而不是仅元数据级更新",
+        "在执行任何写入前明确请求用户确认",
+        "结果中包含对根目录 AGENTS.md 是否需要更新的判断或提示"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "我只在 packages/billing/src/invoice.ts 里重构了内部实现并修了一个不影响对外行为的 bug，没有新增或变更 export。请按 sync-docs 流程处理。",
+      "expected_output": "识别为元数据级更新：只更新相关 MODULE.md 的日期标记，不改模块契约正文；仍需展示预览并等待确认。",
+      "files": [],
+      "expectations": [
+        "将该变更判定为元数据级更新",
+        "预览中仅体现日期更新，不要求重写模块契约正文",
+        "执行前明确请求用户确认"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "这次改动里新增了 modules/reconciliation/ 目录（里面有对账逻辑），并删除了 modules/legacy-report/ 整个模块。请同步文档：新模块需要 MODULE.md，老模块对应文档需要移除。",
+      "expected_output": "在预览中同时给出新建与删除项：为新增目录生成一份结构完整的 MODULE.md（含职责边界和依赖），并删除已移除模块对应的 MODULE.md；执行前必须逐项确认。",
+      "files": [],
+      "expectations": [
+        "预览同时包含新建与删除两类变更",
+        "新增模块的 MODULE.md 草案包含职责边界与依赖字段",
+        "删除项明确列出被删除的 MODULE.md 路径",
+        "执行前提供确认步骤"
+      ]
+    }
+  ]
+}

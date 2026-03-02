@@ -1,0 +1,59 @@
+{
+  "skill_name": "sync-docs",
+  "description": "Sync git changes into AGENTS.md/MODULE.md and prevent code-doc contract drift. \u4f18\u5148\u5728\u4ee5\u4e0b\u573a\u666f\u89e6\u53d1\uff1a\u7528\u6237\u63d0\u5230\u201c\u540c\u6b65\u6587\u6863\u201d\u201c\u66f4\u65b0 MODULE.md/AGENTS.md\u201d\u201c\u6839\u636e\u4ee3\u7801\u53d8\u66f4\u5237\u65b0\u5951\u7ea6\u201d\u201c\u6587\u6863\u4e0e\u4ee3\u7801\u4e0d\u4e00\u81f4\u201d\u201c\u6309 git diff \u66f4\u65b0\u6587\u6863\u201d\uff1b\u5373\u4f7f\u7528\u6237\u6ca1\u660e\u786e\u8bf4 skill \u540d\u79f0\u4e5f\u5e94\u89e6\u53d1\u3002\u5de5\u4f5c\u6d41\uff1a\u81ea\u52a8\u68c0\u6d4b\u53d8\u66f4\u3001\u6309\u8bed\u4e49\u533a\u5206\u5185\u5bb9\u7ea7/\u5143\u6570\u636e\u7ea7\u66f4\u65b0\u3001\u5148\u751f\u6210\u9884\u89c8\u3001\u83b7\u5f97\u786e\u8ba4\u540e\u518d\u6267\u884c\u5199\u5165/\u5220\u9664\u3002",
+  "results": [
+    {
+      "query": "\u6587\u6863\u548c\u4ee3\u7801\u6709\u70b9\u6f02\u79fb\u4e86\uff0c\u6309 git diff \u5e2e\u6211\u5237\u65b0\u6a21\u5757\u5951\u7ea6\u6587\u6863\u3002",
+      "should_trigger": true,
+      "trigger_rate": 0.0,
+      "triggers": 0,
+      "runs": 2,
+      "pass": false
+    },
+    {
+      "query": "\u6211\u521a\u6539\u4e86 payment \u6a21\u5757\u4ee3\u7801\uff0c\u5e2e\u6211\u628a\u5bf9\u5e94 MODULE.md \u548c AGENTS.md \u4e00\u8d77\u540c\u6b65\u4e00\u4e0b\uff0c\u5148\u9884\u89c8\u518d\u6539\u3002",
+      "should_trigger": true,
+      "trigger_rate": 0.0,
+      "triggers": 0,
+      "runs": 2,
+      "pass": false
+    },
+    {
+      "query": "\u8bf7\u6839\u636e\u6700\u8fd1\u4e00\u6b21 commit \u81ea\u52a8\u5224\u65ad\u54ea\u4e9b\u6a21\u5757\u9700\u8981\u66f4\u65b0 MODULE.md\uff0c\u5e76\u5206\u5185\u5bb9\u7ea7/\u5143\u6570\u636e\u7ea7\u7ed9\u6211\u9884\u89c8\u3002",
+      "should_trigger": true,
+      "trigger_rate": 0.0,
+      "triggers": 0,
+      "runs": 2,
+      "pass": false
+    },
+    {
+      "query": "\u628a src/user/service.ts \u91cd\u6784\u6210\u66f4\u5e72\u51c0\u7684\u5b9e\u73b0\uff0c\u987a\u4fbf\u52a0\u51e0\u4e2a\u6d4b\u8bd5\u3002",
+      "should_trigger": false,
+      "trigger_rate": 0.0,
+      "triggers": 0,
+      "runs": 2,
+      "pass": true
+    },
+    {
+      "query": "\u5e2e\u6211\u5199\u4e00\u4e2a AGENTS.md \u6a21\u677f\uff0c\u9879\u76ee\u8fd8\u6ca1\u6709\u4efb\u4f55\u4ee3\u7801\u3002",
+      "should_trigger": false,
+      "trigger_rate": 0.0,
+      "triggers": 0,
+      "runs": 2,
+      "pass": true
+    },
+    {
+      "query": "\u6211\u60f3\u770b git \u5386\u53f2\u91cc\u8c01\u6539\u4e86 invoice.ts \u7684\u7b2c 120 \u884c\u3002",
+      "should_trigger": false,
+      "trigger_rate": 0.0,
+      "triggers": 0,
+      "runs": 2,
+      "pass": true
+    }
+  ],
+  "summary": {
+    "total": 6,
+    "passed": 3,
+    "failed": 3
+  }
+}
