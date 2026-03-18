@@ -1,0 +1,26 @@
+[
+  {
+    "query": "我刚改了 payment 模块代码，帮我把对应 MODULE.md 和 AGENTS.md 一起同步一下，先预览再改。",
+    "should_trigger": true
+  },
+  {
+    "query": "文档和代码有点漂移了，按 git diff 帮我刷新模块契约文档。",
+    "should_trigger": true
+  },
+  {
+    "query": "请根据最近一次 commit 自动判断哪些模块需要更新 MODULE.md，并分内容级/元数据级给我预览。",
+    "should_trigger": true
+  },
+  {
+    "query": "把 src/user/service.ts 重构成更干净的实现，顺便加几个测试。",
+    "should_trigger": false
+  },
+  {
+    "query": "帮我写一个 AGENTS.md 模板，项目还没有任何代码。",
+    "should_trigger": false
+  },
+  {
+    "query": "我想看 git 历史里谁改了 invoice.ts 的第 120 行。",
+    "should_trigger": false
+  }
+]
