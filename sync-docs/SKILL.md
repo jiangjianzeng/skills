@@ -1,6 +1,6 @@
 ---
 name: sync-docs
-description: Sync git changes into AGENTS.md/MODULE.md and prevent code-doc contract drift. 优先在以下场景触发：用户提到“同步文档”“更新 MODULE.md/AGENTS.md”“根据代码变更刷新契约”“文档与代码不一致”“按 git diff 更新文档”；即使用户没明确说 skill 名称也应触发。工作流：自动检测变更、按语义区分内容级/元数据级更新、先生成预览、然后自动执行写入/删除（不询问确认）。
+description: Sync git changes into AGENTS.md/MODULE.md and prevent code-doc contract drift. 优先在以下场景触发：用户提到"同步文档""更新 MODULE.md/AGENTS.md""根据代码变更刷新契约""文档与代码不一致""按 git diff 更新文档"；即使用户没明确说 skill 名称也应触发。工作流：自动检测变更、按语义区分内容级/元数据级更新、先生成预览、然后自动执行写入/删除（不询问确认）。
 allowed-tools: read, apply_patch, bash(git:*), grep, glob
 ---
 
